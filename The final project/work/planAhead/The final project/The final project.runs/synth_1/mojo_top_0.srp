@@ -1,0 +1,868 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/seven_seg_15.v" into library work
+Parsing module <seven_seg_15>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/pipeline_12.v" into library work
+Parsing module <pipeline_12>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/decoder_16.v" into library work
+Parsing module <decoder_16>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/decimal_counter_17.v" into library work
+Parsing module <decimal_counter_17>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/counter_14.v" into library work
+Parsing module <counter_14>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
+Parsing module <reset_conditioner_2>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/pn_gen_11.v" into library work
+Parsing module <pn_gen_11>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/multi_seven_seg_8.v" into library work
+Parsing module <multi_seven_seg_8>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/multi_dec_ctr_9.v" into library work
+Parsing module <multi_dec_ctr_9>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/edge_detector_6.v" into library work
+Parsing module <edge_detector_6>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/edge_detector_5.v" into library work
+Parsing module <edge_detector_5>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/counter_10.v" into library work
+Parsing module <counter_10>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/button_conditioner_3.v" into library work
+Parsing module <button_conditioner_3>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/boolean_1.v" into library work
+Parsing module <boolean_1>.
+Analyzing Verilog file "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <boolean_1>.
+
+Elaborating module <reset_conditioner_2>.
+
+Elaborating module <button_conditioner_3>.
+
+Elaborating module <pipeline_12>.
+
+Elaborating module <edge_detector_5>.
+
+Elaborating module <edge_detector_6>.
+
+Elaborating module <multi_seven_seg_8>.
+
+Elaborating module <counter_14>.
+
+Elaborating module <seven_seg_15>.
+
+Elaborating module <decoder_16>.
+
+Elaborating module <multi_dec_ctr_9>.
+
+Elaborating module <decimal_counter_17>.
+
+Elaborating module <counter_10>.
+
+Elaborating module <pn_gen_11>.
+WARNING:HDLCompiler:413 - "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 235: Result of 64-bit expression is truncated to fit in 32-bit target.
+WARNING:HDLCompiler:413 - "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 238: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <io_dip<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <io_dip<23:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 28-bit register for signal <M_gameclock_q>.
+    Found 4-bit register for signal <M_index_q>.
+    Found 4-bit register for signal <M_attempts_q>.
+    Found 4-bit register for signal <M_mistakes_q>.
+    Found 36-bit register for signal <M_storage_q>.
+    Found 4-bit register for signal <M_iteration_q>.
+    Found 64-bit register for signal <M_randomseed_q>.
+    Found 8-bit register for signal <M_randomstore_q>.
+    Found 28-bit register for signal <M_delay_q>.
+    Found 4-bit register for signal <M_level_q>.
+    Found 3-bit register for signal <M_state_q>.
+    Found finite state machine <FSM_0> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 37                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | M_reset_cond_out (positive)                    |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <M_iteration_q[3]_GND_1_o_sub_65_OUT> created at line 240.
+    Found 28-bit adder for signal <M_gameclock_q[27]_GND_1_o_add_10_OUT> created at line 227.
+    Found 6-bit adder for signal <n0389> created at line 229.
+    Found 64-bit adder for signal <M_randomseed_q[63]_GND_1_o_add_62_OUT> created at line 237.
+    Found 28-bit adder for signal <M_delay_q[27]_GND_1_o_add_73_OUT> created at line 248.
+    Found 6-bit adder for signal <M_index_q[3]_GND_1_o_add_91_OUT> created at line 299.
+    Found 4-bit adder for signal <M_level_q[3]_GND_1_o_add_94_OUT> created at line 308.
+    Found 4-bit adder for signal <M_attempts_q[3]_GND_1_o_add_120_OUT> created at line 338.
+    Found 4-bit adder for signal <M_index_q[3]_GND_1_o_add_121_OUT> created at line 339.
+    Found 4-bit adder for signal <M_mistakes_q[3]_GND_1_o_add_125_OUT> created at line 342.
+    Found 143-bit shifter logical right for signal <n0271> created at line 229
+    Found 71-bit shifter logical right for signal <n0333> created at line 299
+    Found 4x4-bit Read Only RAM for signal <_n0521>
+    Found 4-bit 4-to-1 multiplexer for signal <_n0531> created at line 305.
+WARNING:Xst:737 - Found 1-bit latch for signal <io_led<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <io_led<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 150
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 150
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 150
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 150
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 150
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 150
+WARNING:Xst:737 - Found 1-bit latch for signal <io_led<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 28-bit comparator greater for signal <GND_1_o_M_gameclock_q[27]_LessThan_12_o> created at line 228
+    Found 4-bit comparator greater for signal <GND_1_o_M_iteration_q[3]_LessThan_13_o> created at line 228
+    Found 28-bit comparator greater for signal <M_gameclock_q[27]_PWR_1_o_LessThan_14_o> created at line 228
+    Found 28-bit comparator greater for signal <n0084> created at line 273
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred 184 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   4 Comparator(s).
+	inferred 103 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+	inferred   6 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <boolean_1>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/boolean_1.v".
+WARNING:Xst:647 - Input <alufn<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <boolean_1> synthesized.
+
+Synthesizing Unit <reset_conditioner_2>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/reset_conditioner_2.v".
+    Found 4-bit register for signal <M_stage_q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <reset_conditioner_2> synthesized.
+
+Synthesizing Unit <button_conditioner_3>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/button_conditioner_3.v".
+    Found 20-bit register for signal <M_ctr_q>.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_4_o_add_2_OUT> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <button_conditioner_3> synthesized.
+
+Synthesizing Unit <pipeline_12>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/pipeline_12.v".
+    Found 2-bit register for signal <M_pipe_q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <pipeline_12> synthesized.
+
+Synthesizing Unit <edge_detector_5>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/edge_detector_5.v".
+    Found 1-bit register for signal <M_last_q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <edge_detector_5> synthesized.
+
+Synthesizing Unit <edge_detector_6>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/edge_detector_6.v".
+    Found 1-bit register for signal <M_last_q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <edge_detector_6> synthesized.
+
+Synthesizing Unit <multi_seven_seg_8>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/multi_seven_seg_8.v".
+    Found 4-bit adder for signal <M_ctr_value[1]_GND_8_o_add_0_OUT> created at line 48.
+    Found 31-bit shifter logical right for signal <n0010> created at line 48
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <multi_seven_seg_8> synthesized.
+
+Synthesizing Unit <counter_14>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/counter_14.v".
+    Found 18-bit register for signal <M_ctr_q>.
+    Found 18-bit adder for signal <M_ctr_q[17]_GND_9_o_add_0_OUT> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <counter_14> synthesized.
+
+Synthesizing Unit <seven_seg_15>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/seven_seg_15.v".
+    Found 16x7-bit Read Only RAM for signal <segs>
+    Summary:
+	inferred   1 RAM(s).
+Unit <seven_seg_15> synthesized.
+
+Synthesizing Unit <decoder_16>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/decoder_16.v".
+    Summary:
+	no macro.
+Unit <decoder_16> synthesized.
+
+Synthesizing Unit <multi_dec_ctr_9>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/multi_dec_ctr_9.v".
+INFO:Xst:3210 - "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/multi_dec_ctr_9.v" line 28: Output port <ovf> of the instance <dctr_gen_0[3].dctr> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <multi_dec_ctr_9> synthesized.
+
+Synthesizing Unit <decimal_counter_17>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/decimal_counter_17.v".
+    Found 4-bit register for signal <M_val_q>.
+    Found 4-bit adder for signal <M_val_q[3]_GND_13_o_add_2_OUT> created at line 28.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <decimal_counter_17> synthesized.
+
+Synthesizing Unit <counter_10>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/counter_10.v".
+    Found 25-bit register for signal <M_ctr_q>.
+    Found 25-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <counter_10> synthesized.
+
+Synthesizing Unit <pn_gen_11>.
+    Related source file is "D:/Sidney/ISTD stuff/50002/Mojo Stuff/The final project/work/planAhead/The final project/The final project.srcs/sources_1/imports/verilog/pn_gen_11.v".
+    Found 32-bit register for signal <M_y_q>.
+    Found 32-bit register for signal <M_z_q>.
+    Found 32-bit register for signal <M_w_q>.
+    Found 32-bit register for signal <M_x_q>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pn_gen_11> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 19
+ 18-bit adder                                          : 1
+ 20-bit adder                                          : 2
+ 25-bit adder                                          : 1
+ 28-bit adder                                          : 2
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+ 64-bit adder                                          : 1
+# Registers                                            : 28
+ 1-bit register                                        : 3
+ 18-bit register                                       : 1
+ 2-bit register                                        : 2
+ 20-bit register                                       : 2
+ 25-bit register                                       : 1
+ 28-bit register                                       : 2
+ 32-bit register                                       : 4
+ 36-bit register                                       : 1
+ 4-bit register                                        : 10
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 4
+ 28-bit comparator greater                             : 3
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 105
+ 1-bit 2-to-1 multiplexer                              : 26
+ 18-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 24-bit 2-to-1 multiplexer                             : 6
+ 28-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 3
+ 36-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 47
+ 4-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 9
+# Logic shifters                                       : 3
+ 143-bit shifter logical right                         : 1
+ 31-bit shifter logical right                          : 1
+ 71-bit shifter logical right                          : 1
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+# FSMs                                                 : 1
+# Xors                                                 : 11
+ 1-bit xor2                                            : 8
+ 32-bit xor2                                           : 2
+ 32-bit xor4                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <button_conditioner_3>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <button_conditioner_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_10>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_14>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_14> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decimal_counter_17>.
+The following registers are absorbed into counter <M_val_q>: 1 register on signal <M_val_q>.
+Unit <decimal_counter_17> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mojo_top_0>.
+The following registers are absorbed into counter <M_mistakes_q>: 1 register on signal <M_mistakes_q>.
+The following registers are absorbed into counter <M_attempts_q>: 1 register on signal <M_attempts_q>.
+The following registers are absorbed into counter <M_delay_q>: 1 register on signal <M_delay_q>.
+The following registers are absorbed into counter <M_randomseed_q>: 1 register on signal <M_randomseed_q>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <M_level_q> prevents it from being combined with the RAM <Mram__n0521> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_level_q<1:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mojo_top_0> synthesized (advanced).
+
+Synthesizing (advanced) Unit <seven_seg_15>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <char>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segs>          |          |
+    -----------------------------------------------------------------------
+Unit <seven_seg_15> synthesized (advanced).
+WARNING:Xst:2677 - Node <M_randomstore_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomstore_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomstore_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomstore_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomstore_q_7> of sequential type is unconnected in block <mojo_top_0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 7
+ 28-bit adder                                          : 1
+ 4-bit adder                                           : 3
+ 4-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+# Counters                                             : 12
+ 18-bit up counter                                     : 1
+ 20-bit up counter                                     : 2
+ 25-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 6
+ 64-bit up counter                                     : 1
+# Registers                                            : 218
+ Flip-Flops                                            : 218
+# Comparators                                          : 4
+ 28-bit comparator greater                             : 3
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 204
+ 1-bit 2-to-1 multiplexer                              : 163
+ 2-bit 2-to-1 multiplexer                              : 1
+ 24-bit 2-to-1 multiplexer                             : 6
+ 28-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 36-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 12
+ 4-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 9
+# Logic shifters                                       : 3
+ 143-bit shifter logical right                         : 1
+ 31-bit shifter logical right                          : 1
+ 71-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 11
+ 1-bit xor2                                            : 8
+ 32-bit xor2                                           : 2
+ 32-bit xor4                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <M_state_q[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 100   | 100
+ 001   | 001
+ 010   | 010
+ 011   | 011
+-------------------
+WARNING:Xst:2677 - Node <M_randomseed_q_32> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_33> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_36> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_34> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_35> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_39> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_37> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_38> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_42> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_40> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_41> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_43> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_44> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_47> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_45> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_46> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_48> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_49> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_52> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_50> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_51> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_53> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_54> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_57> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_55> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_56> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_60> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_58> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_59> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_63> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_61> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <M_randomseed_q_62> of sequential type is unconnected in block <mojo_top_0>.
+
+Optimizing unit <mojo_top_0> ...
+WARNING:Xst:1293 - FF/Latch <M_storage_q_34> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_storage_q_33> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_25> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_storage_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <pn_gen_11> ...
+WARNING:Xst:1293 - FF/Latch <M_level_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_delay_q_25> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_delay_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_delay_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_randomstore_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <random/M_z_q_0> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <ctr/M_ctr_q_17> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 11.
+FlipFlop M_index_q_1 has been replicated 1 time(s)
+FlipFlop M_index_q_2 has been replicated 1 time(s)
+FlipFlop M_state_q_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop M_state_q_FSM_FFd2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+	Found 2-bit shift register for signal <button_conditioner/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <button_conditioner2/sync/M_pipe_q_1>.
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 348
+ Flip-Flops                                            : 348
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 943
+#      GND                         : 8
+#      INV                         : 15
+#      LUT1                        : 164
+#      LUT2                        : 22
+#      LUT3                        : 56
+#      LUT4                        : 103
+#      LUT5                        : 76
+#      LUT6                        : 159
+#      MUXCY                       : 179
+#      MUXF7                       : 4
+#      VCC                         : 7
+#      XORCY                       : 150
+# FlipFlops/Latches                : 353
+#      FD                          : 48
+#      FDE                         : 34
+#      FDR                         : 37
+#      FDRE                        : 224
+#      FDS                         : 4
+#      FDSE                        : 3
+#      LD                          : 3
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 63
+#      IBUF                        : 9
+#      OBUF                        : 48
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             350  out of  11440     3%  
+ Number of Slice LUTs:                  597  out of   5720    10%  
+    Number used as Logic:               595  out of   5720    10%  
+    Number used as Memory:                2  out of   1440     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    649
+   Number with an unused Flip Flop:     299  out of    649    46%  
+   Number with an unused LUT:            52  out of    649     8%  
+   Number of fully used LUT-FF pairs:   298  out of    649    45%  
+   Number of unique control sets:        29
+
+IO Utilization: 
+ Number of IOs:                          93
+ Number of bonded IOBs:                  64  out of    102    62%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------------------+------------------------+-------+
+clk                                                                          | BUFGP                  | 352   |
+M_state_q[2]_GND_16_o_Mux_191_o(M_state_q_M_state_q[2]_GND_16_o_Mux_191_o1:O)| NONE(*)(io_led_9)      | 3     |
+-----------------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.829ns (Maximum Frequency: 146.434MHz)
+   Minimum input arrival time before clock: 4.913ns
+   Maximum output required time after clock: 10.004ns
+   Maximum combinational path delay: 4.921ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.829ns (frequency: 146.434MHz)
+  Total number of paths / destination ports: 17681 / 872
+-------------------------------------------------------------------------
+Delay:               6.829ns (Levels of Logic = 5)
+  Source:            button_conditioner2/M_ctr_q_9 (FF)
+  Destination:       M_mistakes_q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: button_conditioner2/M_ctr_q_9 to M_mistakes_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.525   1.181  M_ctr_q_9 (M_ctr_q_9)
+     LUT6:I0->O            3   0.254   0.994  out3 (out2)
+     end scope: 'button_conditioner2:out2'
+     LUT6:I3->O            1   0.235   0.958  out_SW0 (N23)
+     LUT6:I2->O           12   0.254   1.069  out (n0142)
+     LUT6:I5->O            4   0.254   0.803  _n0685_inv (_n0685_inv)
+     FDRE:CE                   0.302          M_mistakes_q_0
+    ----------------------------------------
+    Total                      6.829ns (1.824ns logic, 5.005ns route)
+                                       (26.7% logic, 73.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 13 / 9
+-------------------------------------------------------------------------
+Offset:              4.913ns (Levels of Logic = 5)
+  Source:            io_dip<8> (PAD)
+  Destination:       M_state_q_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: io_dip<8> to M_state_q_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.032  io_dip_8_IBUF (io_dip_8_IBUF)
+     LUT3:I0->O            1   0.235   0.910  M_state_q_FSM_FFd1-In2 (M_state_q_FSM_FFd1-In2)
+     LUT6:I3->O            1   0.235   0.000  M_state_q_FSM_FFd1-In4_SW1_F (N147)
+     MUXF7:I0->O           1   0.163   0.682  M_state_q_FSM_FFd1-In4_SW1 (N138)
+     LUT6:I5->O            2   0.254   0.000  M_state_q_FSM_FFd1-In5 (M_state_q_FSM_FFd1-In)
+     FDR:D                     0.074          M_state_q_FSM_FFd1
+    ----------------------------------------
+    Total                      4.913ns (2.289ns logic, 2.624ns route)
+                                       (46.6% logic, 53.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1194 / 34
+-------------------------------------------------------------------------
+Offset:              10.004ns (Levels of Logic = 10)
+  Source:            M_gameclock_q_0 (FF)
+  Destination:       io_led<23> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: M_gameclock_q_0 to io_led<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.525   1.271  M_gameclock_q_0 (M_gameclock_q_0)
+     LUT5:I0->O            1   0.254   0.000  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_lut<0> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<0> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<1> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<2> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<3> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<3>)
+     MUXCY:CI->O           1   0.235   0.790  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<4> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<4>)
+     LUT4:I2->O            1   0.250   1.137  Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<5> (Mcompar_GND_1_o_M_gameclock_q[27]_LessThan_12_o_cy<5>)
+     LUT6:I0->O            2   0.254   1.156  GND_1_o_M_gameclock_q[27]_AND_54_o1 (GND_1_o_M_gameclock_q[27]_AND_54_o)
+     LUT6:I1->O            1   0.254   0.681  Mmux_io_led151 (io_led_23_OBUF)
+     OBUF:I->O                 2.912          io_led_23_OBUF (io_led<23>)
+    ----------------------------------------
+    Total                     10.004ns (4.969ns logic, 5.035ns route)
+                                       (49.7% logic, 50.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'M_state_q[2]_GND_16_o_Mux_191_o'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            io_led_10 (LATCH)
+  Destination:       io_led<10> (PAD)
+  Source Clock:      M_state_q[2]_GND_16_o_Mux_191_o falling
+
+  Data Path: io_led_10 to io_led<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  io_led_10 (io_led_10)
+     OBUF:I->O                 2.912          io_led_10_OBUF (io_led<10>)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               4.921ns (Levels of Logic = 2)
+  Source:            io_button<4> (PAD)
+  Destination:       led<4> (PAD)
+
+  Data Path: io_button<4> to led<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  io_button_4_IBUF (led_4_OBUF)
+     OBUF:I->O                 2.912          led_4_OBUF (led<4>)
+    ----------------------------------------
+    Total                      4.921ns (4.240ns logic, 0.681ns route)
+                                       (86.2% logic, 13.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock M_state_q[2]_GND_16_o_Mux_191_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.141|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.829|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.65 secs
+ 
+--> 
+
+Total memory usage is 303400 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   73 (   0 filtered)
+Number of infos    :   24 (   0 filtered)
+

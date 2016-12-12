@@ -1,0 +1,407 @@
+module mojo_top (
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,      // AVR RX buffer full
+    output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
+    input io_dip [3][8],     // DIP switches on IO Shield
+    input button,            // Super cool button!
+    input button2,
+    output right,
+    output wrong,
+    output buzzer,
+    output red
+    /*
+    input red,
+   output redout,
+    input blue,
+   output blueout,
+    input yellow,
+    output yellowout,
+    input green,
+    output greenout
+    */
+   
+  ) {
+  var i;
+  sig rst;                  // reset signal
+  sig longarr[18][4];
+  sig check[4];
+  sig bitcheck;
+  boolean boolean_module;
+  
+  //sig and;
+ 
+  
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    button_conditioner button_conditioner;
+     button_conditioner button_conditioner2;
+    edge_detector edge_detector (#RISE(1), #FALL(0));
+   edge_detector button_detector (#RISE(0), #FALL(1));
+    edge_detector button_detector2 (#RISE(0), #FALL(1));
+    
+    .rst(rst) {
+      multi_seven_seg seg;
+      multi_dec_ctr dec_ctr;
+      counter ctr (#SIZE(1), #DIV(24));
+      dff gameclock[28];
+      dff index[4];
+      dff attempts[4];
+      dff mistakes[4];
+      dff storage[9][4];
+      dff iteration[4](#INIT(3));
+      dff randomseed[64](#INIT(1));
+      dff randomstore[8];
+      dff delay[28];
+      pn_gen random;
+      
+     
+      dff level[4](#INIT(0));
+      fsm state = {IDLE,DISPLAY,BUTTONS,TRANSITION,GAMEOVER};
+     
+    }
+  }
+  
+  always {
+
+    /*
+    
+Retarded mistakes:
+1. Not wireing the connections to gnd properly
+2. Not wiring led properly
+3. Cannot cram the wires together
+4. Never specify Pullup resistance for button
+5. Resetting the registers can break the game for some reaseon
+         for(i =0; i<9; i++){
+            storage.d[i] =0;
+             }
+6. Letting the game clock run in the background which screwed my timings over.
+    */
+    button_conditioner.in = !button;
+    button_conditioner2.in = !button2;
+    buzzer = 0;
+    red = 1;  
+    
+    button_detector.in = button_conditioner.out;
+    button_detector2.in = button_conditioner2.out;
+    
+    
+ 
+    
+    boolean_module.a =0;
+    boolean_module.b =0;
+    boolean_module.alufn =0;
+    
+    //This piece of code is used to clear everything
+    
+    
+  longarr[0] = 4b1000;
+  longarr[1] = 4b0001;
+  longarr[2] = 4b0001;
+  longarr[3] = 4b1000;
+  longarr[4] = 4b0001;
+  longarr[5] = 4b1000;
+  longarr[6] = 4b0001;
+  longarr[7] = 4b1000;
+  longarr[8] = 4b0001;
+  longarr[9] = 4b1000;
+  longarr[10] = 4b1000;
+  longarr[11] = 4b0001;
+  longarr[12] = 4b1000;
+  longarr[13] = 4b0001;
+  longarr[14] = 4b1000;
+  longarr[15] = 4b0001;
+  longarr[16] = 4b0001;
+  longarr[17] = 4b1000;
+  
+   
+    io_led[2][7:4] =0;
+    io_led[2][3:0] =0;
+    io_led[1][7:3] = 0;
+    io_led[0][7:6] = 0; 
+    io_led[0][5:0] =0;
+     random.seed = 0;
+     random.next = 0;
+   
+    
+    
+    /*
+    io_led[0] = randomseed.q;
+    io_led[2] = randomstore.q;
+    io_led[1] = random.num[31:24];
+    */
+    
+    
+    right = 0;
+    wrong = 0;
+    
+    //gameclock.d = gameclock.q +1;
+    
+   
+    reset_cond.in = ~rst_n;   // input raw inverted reset signal
+    rst = reset_cond.out;     // conditioned reset 
+    led = c{3b0, io_button};  // connect buttons to LEDs
+    spi_miso = bz;            // not using SPI
+    spi_channel = bzzzz;      // not using flags
+    avr_rx = bz;              // not using serial port  
+    edge_detector.in = ctr.value;
+    dec_ctr.inc = edge_detector.out;
+    seg.values = dec_ctr.digits;   
+    io_seg = ~seg.seg; // connect segments to the driver
+    io_sel = ~seg.sel; // connect digit select to the driver
+    
+    
+    
+    
+      if(mistakes.q ==3 ){  
+      //Reason why the condition is set at 2 is because
+      // the value of attempts.d is initialised at 0 and only      
+      //updated at the end of the clock cycle.
+      //Hence 0, 1, 2 is the value of the register for 3 presses at each clk cycle
+      //This goes ouside of the loop cos we want to check it at all times
+      state.d = state.GAMEOVER;
+      }
+    
+    
+       case (state.q) {
+      state.IDLE:
+      
+      if(io_dip[1][0]==1){
+        state.d = state.DISPLAY;
+          }
+        
+        
+      state.DISPLAY:        
+    io_led[2][7:4] =0;
+    //io_led[2][3:0] =iteration.q;
+    io_led[2][3:0] =0;
+    io_led[1][7:3] = longarr[randomstore.q[2:0]];
+    //Arhboh just display the register contents?
+    io_led[1][4:0] = index.q;
+    io_led[0][7:4] = storage.q[index.q];
+    io_led[0][3:0] = randomstore.q[2:0]; 
+    
+      
+              
+    //Flash event 
+    gameclock.d = gameclock.q +1;
+    //if((gameclock.q[27:0] > 28b100011110000110100011000000 ) && (iteration.q>0) && gameclock.q[27:0] < 28b1101011010010011101001000000){
+    if((gameclock.q[27:0] > 28h47868C0 ) && (iteration.q>0) && gameclock.q[27:0] < 28hEE6B280 ){
+    //gameclock.q[31:0] >= 26x{1} to compare abs val
+    io_led[2][7:4] = longarr[randomstore.q[2:0]];
+          
+      }
+        
+    //Note to self: the first cycle may not kickk in in time on mistake    
+    if(gameclock.q[27:0] == 28hD693A40 && iteration.q >0){
+        //DK to store before or during the thing 
+             storage.d[index.q] = longarr[randomstore.q[2:0]];
+          }
+        
+    // Decrement the number of iterations 
+    //Store the value in a register
+    //increases the pointer
+    if(gameclock.q[27:0] == 28x{1} && iteration.q >0){
+       //CONDITION: UPDATE RANDOM 
+          random.seed = randomseed.q;
+          random.next = 1;
+          randomseed.d= randomseed.q+1;
+          randomstore.d = random.num;
+          index.d = index.q+1;  
+          iteration.d = iteration.q -1;   
+       
+    }
+    
+        
+    if (iteration.q == 0){    
+    //Condition: finish displaying          
+         
+
+          index.d = 0;    
+           state.d = state.BUTTONS;// State transition achieved
+          }
+        
+      state.TRANSITION:
+            delay.d = delay.q +1;
+            gameclock.d =0;
+            index.d =0;
+            attempts.d =0;//Clear the number of attempts
+        
+         for(i =0; i<9; i++){
+            storage.d[i] =0;
+             }
+        
+          
+            
+          case (level.q) {
+            0: iteration.d = 3;
+            1: iteration.d =5;
+            2: iteration.d =7;
+            3: iteration.d =9;
+            default: iteration.d = 0;
+            }
+        
+        if(delay.q >= 25x{1}){
+            delay.d = 0;
+        
+            state.d = state.DISPLAY;
+        }
+          
+        
+    
+        
+ 
+      state.BUTTONS:
+        io_led[2][7:4] = 0;
+        io_led[2][3:0] = storage.q[index.q];
+        io_led[1][7:4] = mistakes.q;
+        io_led[1][3:0] = index.q;
+        io_led[0][7:4] = level.q;
+        io_led[0][3:0] = attempts.q;
+              case (level.q) {
+           //After pressing the full combination of the sequence, go to the next iteration.
+            0: if(attempts.q == 3){
+              level.d = level.q +1;
+              state.d = state.TRANSITION;
+              }
+           1: if(attempts.q == 5){
+              level.d = level.q +1;
+              state.d = state.TRANSITION;
+              }
+          
+            2: if(attempts.q == 7){
+              level.d = level.q +1;
+              state.d = state.TRANSITION;
+              }
+          
+            3: if(attempts.q == 9){
+              level.d = level.q +1;
+              state.d = state.TRANSITION;
+              }
+                       
+          }
+                 
+    if (button_detector.out){
+        //Detect a button press
+          //index.d = index.q +1;
+         boolean_module.alufn = 6b000111; 
+         boolean_module.a = 8b0001;
+         boolean_module.b = storage.q[index.q];//Need to make sure the stored value is correct
+         //boolean_module.b = 8b0001;
+         check = &boolean_module.boole[3:0];
+      if(check == 1){
+      right = 1;//Light up the green led
+      attempts.d = attempts.q +1; //only if you get all correct
+      index.d = index.q +1;
+      }
+    
+      if(check == 0){
+      mistakes.d =mistakes.q+1;//Increase the number of mistakes made      
+      wrong = 1;//Light up the red led
+      state.d = state.TRANSITION;
+      }
+        }
+          
+          
+        
+       if(button_conditioner.out){
+      //attempts.d = attempts.q +1;                   
+         boolean_module.alufn = 6b000111; 
+         boolean_module.a = 8b0001;
+         boolean_module.b = storage.q[index.q];//Need to make sure the stored value is correct
+         //boolean_module.b = 8b0001;
+         check = &boolean_module.boole[3:0];
+        
+            
+      if(check == 1){
+      right = 1;//Light up the green led
+      }
+    
+      if(check == 0){
+      wrong = 1;//Light up the red led
+      }
+          }
+        
+        
+        if (button_detector2.out){
+        //Detect a button press
+          
+         //index.d = index.q +1;
+         boolean_module.alufn = 6b000111; 
+         boolean_module.a = 8b1000;
+         boolean_module.b = storage.q[index.q];//Need to make sure the stored value is correct
+         //boolean_module.b = 8b0001;
+         check = &boolean_module.boole[3:0];
+        
+            
+      if(check == 1){
+      right = 1;//Light up the green led
+      attempts.d = attempts.q +1; //only if you get all correct
+            index.d = index.q +1;
+      }
+    
+      if(check != 1){
+      mistakes.d =mistakes.q+1;//Increase the number of mistakes made      
+      wrong = 1;//Light up the red led
+      state.d = state.TRANSITION; 
+      }
+        }
+          
+       if(button_conditioner2.out){
+      //attempts.d = attempts.q +1;    
+         
+         boolean_module.alufn = 6b000111; 
+         boolean_module.a = 8b1000;
+         boolean_module.b = storage.q[index.q];//Need to make sure the stored value is correct
+         check = &boolean_module.boole[3:0];         
+      if(check == 1){
+      right = 1;//Light up the green led
+      }
+    
+      if(check != 1){
+      wrong = 1;//Light up the red led
+      }
+          }
+        
+        
+          state.GAMEOVER:
+       //End Game  
+      io_led[2] =8hFF;
+      io_led[1] =8hFF;
+      io_led[0] =8hFF;
+      if(button_detector.out){
+         io_led[2] =0;
+         io_led[1] =0;
+         io_led[0] =0;
+        mistakes.d =0;
+        level.d = 0;
+        index.d = 0;
+        // Reset the iterator?
+        iteration.d =3;
+        gameclock.d =0;
+          for(i =0; i<9; i++){
+            storage.d[i] =0;
+             }
+          
+        state.d = state.IDLE;
+          }
+        
+    }
+    }
+    
+  }    
+
