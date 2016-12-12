@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=D:\Sidney\ISTD stuff\50002\Mojo Stuff\The final project - 4 inputs\work\planAhead\The final project\The final project.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=D:\Sidney\ISTD stuff\50002\Mojo Stuff\The final project - 4 inputs\work\planAhead\The final project\The final project.runs\impl_1\mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=D:\Sidney\ISTD stuff\50002\Mojo Stuff\The final project - 4 inputs\work\planAhead\The final project\The final project.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211257292_0_0_552
