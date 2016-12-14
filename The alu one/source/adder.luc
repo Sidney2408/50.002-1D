@@ -1,0 +1,61 @@
+module adder ( //performs addition, subtration, multiplication, modulo functions
+//inputs from the ALU
+    input alufn[6],
+    input a[8],  
+    input b[8],  
+//outputs to the ALU   
+    output sum1[8],
+    output z,
+    output v,
+    output n
+
+   
+  ) {
+  
+
+//sig ssum[9]; //subtraction sum used to calculate z,v,n
+sig newsum[8];
+sig xb7;
+
+  
+  
+  always {
+   //for (i=0; i<8; i++){ 
+    //xb[i] = alufn[0] ^ b[i];}// perform the XOR 
+    case(alufn[0]){ //alufn value controlling add or subtract operator
+    
+    b0:
+      newsum = a+ b;// need to do the always XOR b operation
+
+    b1:
+      newsum = a-b;
+
+
+    default:
+      newsum = a + b;
+
+          
+  }
+    //assigning values to outputs
+    sum1=newsum;
+    xb7 = b[7] ^ alufn[0];
+    //ssum = ssum;//So that's what you mean by written
+    //v = (a[7] & ~b[7] & (~ssum[7])) | ((~a[7])&(b[7])&ssum[7]);
+    //overadd = (a[7] & b[7] & (~sum[7])) | ((~a[7])&(~b[7])&sum[7]);
+    //n = ssum[7];
+    //z = ~|ssum;
+
+    n = newsum[7];
+    if (a - b == 8b0){
+    z = b1;}
+        else{
+    z=b0;}
+//    if ( (a[7]==b1 && b[7] ==b0 && newsum[7] ==b0)||(a[7]==b0 && b[7] ==b1 && newsum[7] ==b1)){
+ //   v=b1;}
+  //      else{
+    //    v=b0;}
+    v  = (a[7] & xb7 & (~newsum[7])) | ((~a[7])&(~xb7)&newsum[7]);
+    
+
+}
+}
